@@ -1,5 +1,4 @@
-FROM nginx:alpine
-MAINTAINER "Yannick Scherer <yannick.scherer@gmail.com>"
+FROM nginx:1.25.1-alpine
 
 # --------------------
 # METADATA
@@ -32,6 +31,12 @@ RUN wget -O dockerize.tar.gz https://github.com/jwilder/dockerize/releases/downl
 # TEMPLATES
 # --------------------
 COPY default.conf.tpl nginx.conf.tpl /templates/
+
+# --------------------
+# SSL
+# --------------------
+COPY server.crt /etc/nginx/server.crt
+COPY server.key /etc/nginx/server.key
 
 # --------------------
 # FILL TEMPLATES & GO

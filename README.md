@@ -1,7 +1,8 @@
-# nginx-sidecar-basic-auth
+# nginx-sidecar-basic-auth-ssl
 
-[![](https://images.microbadger.com/badges/version/xscys/nginx-sidecar-basic-auth.svg)](https://hub.docker.com/r/xscys/nginx-sidecar-basic-auth)
-[![](https://images.microbadger.com/badges/image/xscys/nginx-sidecar-basic-auth.svg)](https://hub.docker.com/r/xscys/nginx-sidecar-basic-auth)
+Based on
+- https://github.com/xsc/nginx-sidecar-basic-auth
+- https://github.com/foxylion/docker-nginx-self-signed-https
 
 This is a Docker image that provides an [nginx][nginx] proxy server enforcing
 HTTP basic authentication on every request (exception `OPTIONS`). It is suitable
